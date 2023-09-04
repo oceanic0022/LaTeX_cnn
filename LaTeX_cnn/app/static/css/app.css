@@ -1,0 +1,70 @@
+.canvas {
+    border: solid 1px black;
+    width: 1000px;
+    height: 280px;
+}
+
+.clear-button {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(200, 16, 16);
+    color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.clear-button:active{
+    border:1px solid #334c66;
+    background-color: rgb(250, 16, 16);
+    color:#e0ebf5;
+}
+
+.send-button {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(5, 200, 30);
+    color: white;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.send-button:active{
+    border:1px solid #334c66;
+    background-color: rgb(4, 143, 22);
+    color:#e0ebf5;
+}
+
+.answer {
+    font-size: 20px;
+}
+
+
+
+h1 {
+    position: relative;
+    background: #f1f8ff;
+    padding: 0.25em 0.5em;
+    border-left: solid 2em #5c9ee7;
+  }
+  
+  h1:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f303";
+    position: absolute;
+    padding: 0em;
+    color: white;
+    font-weight: 900;
+    left: -1.35em;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+
+

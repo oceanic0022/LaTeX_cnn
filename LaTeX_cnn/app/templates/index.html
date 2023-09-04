@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>手書き数式をLaTeXに変換</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>  <!--jsファイルのインポート-->
+    <script src="/static/js/app.js"></script>
+    <script  async ="" src =" https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML " > </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+    
+    <link rel="stylesheet" href="/static/css/app.css"> <!--cssファイル読み込み-->
+  </head>
+
+
+  <body onload="draw();">  <!--プラウザ起動時に実行する関数-->
+    <div align="center">    <!--文字を中央へ-->
+      <h1>LaTeX数式コードへ変換</h1>
+    </div>
+      <ul>
+        <li>対応文字について</li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      
+    <div align="center">    <!--文字を中央へ-->
+      <div class="canvas" >
+          <canvas id="can" width="1000px" height="280px"></canvas>
+    </div>
+      <form action="app.py" method="post">    <!--入力内容をapp.pyへ送信-->
+          <button type="button" onClick="clearCan();"  class="clear-button">けす</button>
+          <button type="button" id="img" name="img" onClick="sendImage();" class="send-button">変換</button>
+          <button type="button" onClick="clear_before_str();">戻る</button>
+          <button type="button" onClick="clear_after_str();">送る</button>
+          <button type="button" onClick="clear_parts();">消しゴム</button>
+          <button type="button" onClick="anti_clear();">鉛筆</button>
+      </form>
+      <p>
+      <nobr id="answer"></nobr>   <!--ここにajaxの出力結果-->     <button onclick="copyToClipboard()">候補1</button><br>
+      <nobr id="answer_2"></nobr>                                <button onclick="copyToClipboard2()">候補2</button><br>
+      <nobr id="answer_3"></nobr>                                <!--<button onclick="copyToClipboard3()">候補3</button><br>--> 
+      </p>
+    </div>
+  </body>
+</html>
